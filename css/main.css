@@ -4,37 +4,50 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  font-family: 'Overpass', sans-serif;
+  font-family: Overpass, sans-serif;
   line-height: 1.5;
-  background-image: linear-gradient(#ff9500, #ff5e3a);
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
+body {
+  background-image: linear-gradient(#ff9500, #ff5e3a);
+  margin: 0;
+}
+
+section {
+  margin: 0 1rem;
+}
+
 h1 {
   color: #fff;
+  font-size: 2rem;
+  margin: 1.2rem 0;
 }
 
 h2 {
   color: #fff;
+  font-size: 1.5rem;
 }
 
-p {
+h3 {
   color: #fff;
+  font-weight: normal;
+  font-size: 1.125rem;
+  padding-bottom: 6vmin;
 }
 
 ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  display: block;
   margin: 0;
   padding: 0;
 }
 
 li {
   list-style-type: none;
+  padding-bottom: 6vmin;
 }
 
 .svg {
@@ -44,9 +57,8 @@ li {
   color: #fff;
 }
 
-.svg:hover,
-.svg:focus {
-  color: #ff5e3a;
+.svg:hover {
+  color: #fff;
 }
 
 .icon {
@@ -64,7 +76,83 @@ li {
   fill: currentColor;
 }
 
-.learn {
-  text-align: left;
+.center {
+  text-align: center;
+}
+
+aside {
+  padding-bottom: 1rem;
+  border: .2rem solid #fff;
+}
+
+.center a {
   color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.125rem;
+}
+
+@media only screen and (min-width: 38em) {
+
+  section {
+    padding: 0 1rem;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+    grid-column-gap: 6vmin;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 2.2rem 0;
+  }
+
+  h2 {
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .bottom {
+    align-items: flex-end;
+  }
+
+  aside {
+    padding: 1rem .5rem;
+    align-content: center;
+  }
+
+  aside a {
+    text-align: left;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  h1 {
+    margin: 5rem 0;
+  }
+
+  h2 {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  aside a {
+    text-align: center;
+  }
+
 }
